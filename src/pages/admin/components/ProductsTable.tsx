@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import * as React from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import Table from 'react-bootstrap/Table';
+import {FormSelect, Pagination} from 'react-bootstrap';
 
 import Product from "../../../types/product";
 import DataLayer from '../../../lib/data-layer';
@@ -31,7 +32,8 @@ const ProductsTable: React.FC<ProductsTableProps> = ({ products }) => {
   const [selectedProduct, setSelectedProduct] = React.useState<Product | null>(null);
   const [showDeleteModal, setShowDeleteModal] = React.useState<boolean>(false);
   const [showSaveModal, setShowSaveModal] = React.useState<boolean>(false);
-
+  
+  
   // Handlers
   const onCloseDeleteModal = React.useCallback(() => setShowDeleteModal(false), [setShowDeleteModal]);
   const onCloseSaveModal = React.useCallback(() => setShowSaveModal(false), [setShowSaveModal]);
@@ -118,7 +120,7 @@ const ProductsTable: React.FC<ProductsTableProps> = ({ products }) => {
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>Title</th>
+                    <th>Title2</th>
                     <th>Description</th>
                     <th>Category</th>
                     <th>Price</th>
